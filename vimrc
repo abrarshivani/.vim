@@ -429,7 +429,7 @@ nmap <Leader>sW :%s/\s\+$//<cr>:let @/=''<cr>
 nmap <Leader>sc :setlocal spell!<bar>setlocal spell?<cr>
 
 set number                      " Show line numbers (toggled with ,sn)
-set rnu                         " Show relative line numbers
+"set rnu                         " Show relative line numbers
 nmap <Leader>sn :call <SID>ToggleNumbering()<cr>
 nmap <Leader>n :call <SID>ToggleNumbering()<cr>
 nmap <Leader>m :call <SID>ToggleNumbering()<cr>
