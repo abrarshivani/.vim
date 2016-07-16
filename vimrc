@@ -47,9 +47,8 @@ fun SetupVAM()
     call vam#ActivateAddons([
 \           'pathogen',
 \           'snipmate',
-\           'snipmate-snippets',
+\           'vim-snippets',
 \           'Indent_Guides',
-\           'Conque_Shell',
 \           'Tagbar',
 \           'vcscommand',
 \           'clang_complete',
@@ -742,7 +741,7 @@ function! MyConqueKeyMappings(term)
     iunmap jJ
     call s:ToggleHiTrailingWS()
 endfunction
-call conque_term#register_function('after_keymap', 'MyConqueKeyMappings')
+"call conque_term#register_function('after_keymap', 'MyConqueKeyMappings')
 
 function! MyConqueBufferEnter(term)
     " Since I use my zsh in vi mode and have mapped jj as <esc> for shell cmd
@@ -751,13 +750,12 @@ function! MyConqueBufferEnter(term)
     iunmap jj
     iunmap jJ
 endfunction
-call conque_term#register_function('buffer_enter', 'MyConqueBufferEnter')
+"call conque_term#register_function('buffer_enter', 'MyConqueBufferEnter')
 
 function! MyConqueBufferLeave(term)
     imap jj <Esc>
     imap jJ <Esc>
 endfunction
-call conque_term#register_function('buffer_leave', 'MyConqueBufferLeave')
 
 "-----------------------------------------------------------------------------
 " PLUGIN: Tagbar
