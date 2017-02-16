@@ -102,7 +102,7 @@ set t_Co=16
 set ruler                       " Show location of cursor in status bar
 set statusline=%t%y%r%m%=line\ %l\ of\ %L,\ col\ %c,\ %p%%
 set showcmd                     " Show multi-char cmds as you type; bottom right
-set list                        " Toggle this with cmd defined below
+set nolist                        " Toggle this with cmd defined below
 " set listchars=tab:»·
 set listchars=tab:>-
 " set listchars=tab:»·,trail:·
@@ -318,7 +318,7 @@ nmap <Leader>sn :call <SID>ToggleNumbering()<cr>
 nmap <Leader>n :call <SID>ToggleNumbering()<cr>
 nmap <Leader>m :call <SID>ToggleNumbering()<cr>
 set number                      " Show line numbers (toggled with ,sn)
-set rnu                         " Show relative line numbers
+"set rnu                         " Show relative line numbers
 autocmd BufRead * let b:numbering='number rnu'
 function! s:ToggleNumbering()
     if b:numbering == ''
@@ -340,7 +340,7 @@ function! s:ToggleNumbering()
     endif
 endfunction
 set number                      " Show line numbers (toggled with ,sn)
-set rnu                         " Show relative line numbers
+"set rnu                         " Show relative line numbers
 
 nmap <Leader>ss :call CycleTerminalPaletteSize()<cr>
 function! CycleTerminalPaletteSize()
